@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0;}
+        body { font-family: Helvetica, sans-serif;  }
+        a { text-decoration: none; }
+        li { list-style: none; }
+        .icon { display: block; }
+
+        #main_header { width: 100%; height: 45px; line-height: 45px; 
+        background-image: url('./images/header_background.png'); text-align: center; position: relative;
+        }
+        #main_header > h1 { color: white; }
+
+         /* 1. 스프라이트 이미지 https://www.toptal.com/developers/css/sprite-generator */
+        .bg-header-left-button { width: 62px; height: 32px; background: url('images/css_sprites.png') -1px -1px; left: 5px; top: 7px; position: absolute; }
+        .bg-header-right-button { width: 32px; height: 32px; background: url('images/css_sprites.png') -1px -35px; right: 5px; top: 7px; position: absolute; }
+        
+        #button_gnb { width: 100%; border-bottom: 1px dotted black; background-color: #EEEEEE}
+        #button_gnb > ul { overflow: hidden;}
+        #button_gnb > ul > li > a{ float: left; width: 20%; text-align: center; height: 35px; line-height: 35px; }
+        #button_gnb > ul > li > a:hover{ 
+        float: left; width: 20%; text-align: center; height: 35px; line-height: 35px;
+        background-color: #EEEE70; font-size: 17px; transform: rotate(3deg);
+        box-shadow: 0px 2px 20px black;
+        transition: background-color 0.5s ease-in, font-size 2s ease-in, transform 1s ease-in, background-color linear 1s;
+        }
+        
+
+        #toggle { display: none; }
+        #toggle + #wrap > #button_gnb { height: 0; transition-duration: 1s; }
+        #toggle + #wrap > #button_gnb > ul > li > a { height: 0; transition-duration: 1s }
+        #toggle:checked + #wrap > #button_gnb { height: 35px; overflow: hidden; }
+        #toggle:checked + #wrap > #button_gnb > ul > li > a { height: 35px; }
+
+        /* .button_home:hover { font-weight: bold;} */
+        /* .button_home:hover { font-weight: bold; } */
+
+        /* 네비게이션 구성 2 */
+        #top_gnb_nav { display: table; width: 100%; border-bottom: 1px dotted black;} /* 테이블과 같은 레이아웃을 같는다 */
+        #top_gnb_nav > div { display: table-cell; position: relative; width: 20%;}  /* td 와 같은 레이아웃을 같는다 */
+        #top_gnb_nav > div > a { display: block; height: 35px; line-height: 35px; text-align: center; }
+        /* | 라인 생성 */
+        #top_gnb_nav > div > a::before { display: block; position: absolute; top: 9px; left: -1px; width: 1px; height: 15px; border-left: 1px solid black; content: '';}
+     
+        /* 본문 */
+        #section_header { padding: 20px; }
+        #section_article { padding: 10px; }
+
+        /* 푸터 구성 */
+        /* html, body { height: 100%; } */
+        /* position:fixed 와 좌우 및 아래를 0으로 주고 30px 크기만큼 키운다 또한 height 크기만큼 글자를 덮어써서 읽을수 없으므로
+        본문 main_section 의 margin-bottom 에서 33px 만큼 띄워주면 된다. */
+        #main_footer { padding: 3px; border-top: 1px dotted black; text-align: center;
+        position: fixed; left: 0; right: 0; bottom: 0; height: 40px; background: white;}
+        #main_section { margin-bottom: 40px; }
+        </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <div id="main_header">
+            <i class="icon bg-header-left-button"></i>
+            <h1>모바일</h1>
+            <label for="toggle">
+            <i class="icon bg-header-right-button"></i></label>
+
+        </div>
+        <div id="button_gnb">
+            <ul>
+                <li class="button_home"><a href="#">IT</a></li>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">JQuery</a></li>
+            </ul>
+        </div>
+        <!-- 네비게이션 2 -->
+        <nav id="top_gnb_nav">
+            <div><a href="#">Main</a></div>
+            <div><a href="#">Python</a></div>
+            <div><a href="#">PHP</a></div>
+            <div><a href="#">Java</a></div>
+            <div><a href="#">GO</a></div>
+        </nav>
+        <!-- 본문 내용 -->
+        <section id="main_section">
+            <header id="section_header">
+                <h1>iPhone X</h1>
+                <time>2020-00-00 - Birthday</time>
+            </header>
+            <article id="section_article">
+                <p>Esse elit non et nulla pariatur exercitation qui. Irure Lorem Lorem reprehenderit dolor commodo consequat. Sit eu laboris dolor id culpa minim nostrud deserunt amet mollit.</p>
+                <br>
+                <p>Esse elit non et nulla pariatur exercitation qui. Irure Lorem Lorem reprehenderit dolor commodo consequat. Sit eu laboris dolor id culpa minim nostrud deserunt amet mollit.</p>
+                <br>
+                <p>Esse elit non et nulla pariatur exercitation qui. Irure Lorem Lorem reprehenderit dolor commodo consequat. Sit eu laboris dolor id culpa minim nostrud deserunt amet mollit.</p>
+
+            </article>
+        </section>
+        
+        <!-- 푸터 구성 -->
+        <footer id="main_footer">
+            <h3>HTML5 + CSS3 Basic</h3>
+            <address>Website Layout Basic</address>
+        </footer>
+
+    </div>
+
+    
+</body>
+</html>

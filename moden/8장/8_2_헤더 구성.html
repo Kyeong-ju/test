@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠팡</title>
+    <!-- IE9 버전 에서 HTML5 인식 -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <style>
+        /* 초기화 */
+        * { margin: 0; padding: 0; font:normal 12px 'Dotum'; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+        img { border: 0; }
+
+        /* 웹페이지 중앙 위치 */
+        body { width: 980px; margin: 0 auto; }
+    </style>
+
+    <!-- 두번째 헤더 태그 스타일 구성 -->
+    <style>
+        #main_header { position: relative; height: 75px; } /* 부모 속성 */
+        #main_header > h1.logo { position: absolute; left: 15px; top: 10px }
+        #main_header > div.login_menu { position: absolute; right: 0; top: 10px }
+    </style>
+
+</head>
+<body>
+    <!-- 첫번째 : 헤더 태그 구성 -->
+    <header id="main_header">
+        <h1 class="logo"><img src="images/title.png" alt=""></h1>
+        <div class="login_menu">
+            <span><a href="#">로그인</a></span>
+            <span><a href="#">회원가입</a></span>
+            <span><a href="#">고객센터</a></span>
+
+        </div>
+    </header>
+    
+</body>
+</html>

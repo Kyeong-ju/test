@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * { margin: 0; padding: 0; }
+        body { font-family: Helvetica, sans-serif; }
+        a { text-decoration: none; }
+        li { list-style: none; }
+        .icon { display: block; }
+
+        /* 헤더 구조 구성 */
+
+
+        /* 스프라이트 이미지 */
+        .bg-header_left_button { width: 62px; height: 32px; background: url('images/css_sprites.png') -1px -1px; left: 5px; top: 7px; position: absolute; }
+        /* .bg-header_right_button { width: 32px; height: 32px; background: url('images/css_sprites.png') -1px -35px; right: 5px; top: 7px; position: absolute; } */
+        
+        /* header 부분 */
+        #main_header { width: 100%; height: 45px; line-height: 45px; background-image: url('images/header_background.png'); position: relative; text-align: center; }
+        #main_header > h1 { color: white; }
+
+        /* 토글 구현 */
+        #toggle { display: none; }   /* 1. input 체크박스 : 화면에서 숨김 */
+        #toggle + #wrap > #toggle_gnb_wrap { display: none; } /* 2. 토글 메뉴 사라짐 */
+        #toggle:checked + #wrap > #toggle_gnb_wrap { display: block; } /* 3. 토글 메뉴(클릭시) 나타남 */
+
+        #toggle_gnb_wrap { background: #363636; padding: 15px;} /* 4. 토글 백그라운드 색 및 패딩 지정 */
+        #toggle_gnb { background: #ffffff; padding: 5px; } /* 5. 토글 메뉴 배경및 패딩 지정 */
+
+        /* 토글 목록 */
+        #toggle_gnb > ul { overflow: hidden; } /* 6. 부모 ul hidden */
+        #toggle_gnb > ul > li > a { width: 80px; float: left; text-align: center; display: block; }  /* 7. 왼쪽정렬(inline) 및 텍스트 중앙 정렬 */
+
+        #main_header > label.right { width: 32px; height: 32px; background: url('images/css_sprites.png') -1px -35px; 
+        right: 5px; top: 7px; position: absolute; }  /* 8. 오른쪽 위 메뉴(아이콘) 스프라이트 이미지 및 레이블 지정*/
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle" /> 
+    <div id="wrap">
+        <div id="main_header">
+
+            <i class="icon bg-header_left_button"></a></i>
+            <h1>Mobile</h1></label>
+            <label for="toggle" class="right">
+            <!-- <i class="icon bg-header_right_button"></i> -->
+        </div>
+
+        <!-- 0. 토글 메뉴 생성 -->
+        <div id="toggle_gnb_wrap"> 
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

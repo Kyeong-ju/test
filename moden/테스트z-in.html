@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { width: 100px; height: 100px; position: relative; }
+        div > #a { position: absolute; background-color: red; z-index: 9;}
+        div > #b { position: absolute; background-color: blue; left: 50px; top: 50px; z-index: 10; }
+        div > #c { position: absolute; background-color: yellow; left: 100px; top: 100px; z-index: 8;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="a"></div>
+        <div id="b"></div>
+        <div id="c"></div>
+    </div>
+    
+</body>
+</html>

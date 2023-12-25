@@ -1,0 +1,11 @@
+자동으로 모바일 웹사이트 이동하기
+<script type="text/javascript">
+var mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson');
+for (var word in mobileKeyWords){
+    if (navigator.userAgent.match(mobileKeyWords[word]) != null){
+        location.href = "보내고 싶은 모바일 경로";
+        break;
+    }
+
+}
+</script>

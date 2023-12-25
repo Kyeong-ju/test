@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * { margin: 0; padding: 0; }
+        body { font-family: Helvetica, sans-serif; }
+        a { text-decoration: none; }
+        li { list-style: none; }
+        .icon { display: block; }
+
+        /* 헤더 구조 구성 */
+
+
+        /* 스프라이트 이미지 */
+        .bg-header_left_button { width: 62px; height: 32px; background: url('images/css_sprites.png') -1px -1px; left: 5px; top: 7px; position: absolute; }
+        /* .bg-header_right_button { width: 32px; height: 32px; background: url('images/css_sprites.png') -1px -35px; right: 5px; top: 7px; position: absolute; } */
+        
+        /* header 부분 */
+        #main_header { width: 100%; height: 45px; line-height: 45px; background-image: url('images/header_background.png'); position: relative; text-align: center; }
+        #main_header > h1 { color: white; }
+
+        /* 메뉴 구성 */
+        #button_gnb { width: 100%; border-bottom: 1px solid black; display: table;}
+        #button_gnb > div { display: table-cell; text-align: center;}
+        #button_gnb > div > a { display: block; height: 35px; line-height: 35px; color: black;}
+
+        /* 토글 구현 */
+        #toggle { display: none; }
+        #toggle + #wrap > #toggle_gnb_wrap { display: none; }
+        #toggle:checked + #wrap > #toggle_gnb_wrap { display: block; }
+
+        #toggle_gnb_wrap { background: #363636; padding: 15px;}
+        #toggle_gnb { background: #ffffff; padding: 5px; }
+
+        /* 토글 목록 */
+        #toggle_gnb > ul { overflow: hidden; }
+        #toggle_gnb > ul > li { width: 80px; float: left; text-align: center; }
+
+        #main_header > label { display: block; height: 32px; }
+        #main_header > label.right { width: 32px; height: 32px; background: url('images/css_sprites.png') -1px -35px; right: 5px; top: 7px; position: absolute; }
+
+        /* 네비게이션 구성 1 */
+        #top_gnb { overflow: hidden; border-bottom: 1px solid black; background: #842111;}
+        #top_gnb > div > a { 
+            /* 수평 정렬 */
+            float: left; width: 25%;
+            /* 크기 및 색상 정렬 */
+            height: 35px; line-height: 35px; text-align: center; color: white;
+         }
+        
+        /* 네비게이션 구성 2 */
+        #top_gnb_nav { display: table; width: 100%; border-bottom: 1px dotted black;} /* 테이블과 같은 레이아웃을 같는다 */
+        #top_gnb_nav > div { display: table-cell; position: relative; }  /* td 와 같은 레이아웃을 같는다 */
+        #top_gnb_nav > div > a { display: block; height: 35px; line-height: 35px; text-align: center; }
+        #top_gnb_nav > div > a::before { display: block; position: absolute; top: 9px; left: -1px; width: 1px; height: 15px; border-left: 1px solid black; content: '';}
+
+        /* 본문 */
+        #section_header { padding: 20px; }
+        #section_article { padding: 10px; }
+
+        /* 푸터 구성 */
+        #main_footer { padding: 10px; border-top: 3px solid black; text-align: center; bottom: 1px; }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle" />
+    <div id="wrap">
+        <div id="main_header">
+            <i class="icon bg-header_left_button"></a></i>
+            <h1>Mobile</h1></label>
+            <label for="toggle" class="right">
+            <!-- <i class="icon bg-header_right_button"></i> -->
+        </div>
+        <div id="button_gnb">
+                    <div><a href="#">메뉴</a></div>
+                    <div><a href="#">메뉴</a></div>
+                    <div><a href="#">메뉴</a></div>
+                    <div><a href="#">메뉴</a></div>
+                    <div><a href="#">메뉴</a></div>
+        </div>
+        <div id="toggle_gnb_wrap"> 
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 네비게이션 1 -->
+        <nav id="top_gnb">
+            <div>
+                <a href="#">버튼</a>
+                <a href="#">버튼</a>
+                <a href="#">버튼</a>
+                <a href="#">버튼</a>
+            </div>
+        </nav>
+        <!-- 네비게이션 2 -->
+        <nav id="top_gnb_nav">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+
+        <!-- 본문 내용 -->
+        <section id="main_section">
+            <header id="section_header">
+                <h1>iPhone X</h1>
+                <time>2020-00-00 - Birthday</time>
+            </header>
+            <article id="section_article">
+                <p>Esse elit non et nulla pariatur exercitation qui. Irure Lorem Lorem reprehenderit dolor commodo consequat. Sit eu laboris dolor id culpa minim nostrud deserunt amet mollit.</p>
+                <br>
+                <p>Esse elit non et nulla pariatur exercitation qui. Irure Lorem Lorem reprehenderit dolor commodo consequat. Sit eu laboris dolor id culpa minim nostrud deserunt amet mollit.</p>
+                <br>
+                <p>Esse elit non et nulla pariatur exercitation qui. Irure Lorem Lorem reprehenderit dolor commodo consequat. Sit eu laboris dolor id culpa minim nostrud deserunt amet mollit.</p>
+
+            </article>
+        </section>
+
+        <!-- 푸터 구성 -->
+        <footer id="main_footer">
+            <h3>HTML5 + CSS3 Basic</h3>
+            <address>Website Layout Basic</address>
+        </footer>
+    </div>
+</body>
+
+</html>

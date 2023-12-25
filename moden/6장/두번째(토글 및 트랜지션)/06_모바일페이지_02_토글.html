@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0;}
+        body { font-family: Helvetica, sans-serif;  }
+        a { text-decoration: none; }
+        li { list-style: none; }
+        .icon { display: block; }
+
+        #main_header { width: 100%; height: 45px; line-height: 45px; 
+        background-image: url('./images/header_background.png'); text-align: center; position: relative;
+        }
+        #main_header > h1 { color: white; }
+
+         /* 1. 스프라이트 이미지 https://www.toptal.com/developers/css/sprite-generator */
+        .header-left-button { width: 62px; height: 32px; background: url('images/css_sprites.png') -1px -1px; left: 5px; top: 7px; position: absolute; }
+        .header-right-button { width: 32px; height: 32px; background: url('images/css_sprites.png') -1px -35px; right: 5px; top: 7px; position: absolute; }
+        
+        /* 2. ############### 토글 버튼 모양 부분 ############### */
+        #button_gnb { width: 100%; border-bottom: 1px dotted black; background-color: #EEEEEE}
+        #button_gnb > ul { overflow: hidden;}
+        #button_gnb > ul > li > a { 
+            float: left; width: 20%; text-align: center; height: 35px; line-height: 35px; 
+            }
+
+        /* 4. ############### 트랜지션 및 속도 부분 ############### */
+        /* #button_gnb > ul > li > a:hover {
+            float: left; width: 20%; text-align: center; height: 35px; line-height: 35px;
+            font-size: 17px; background-color: #EEEE70; transform: rotate(3deg);
+            box-shadow: 0px 2px 20px black;
+            transition: background-color 0.7s ease-in, font-size 2s ease-in, transform 1s ease-in, background-color linear 1s;
+        } */
+        
+        /* 3. ############### 토글 버튼 숨기기 부분 ############### */
+        #toggle { display: none; }
+        #toggle + #wrap > #button_gnb { height: 0;/*  transition-duration: 1s; */}
+        #toggle + #wrap > #button_gnb > ul > li > a { height: 0; /* transition-duration: 1s */}
+        #toggle:checked + #wrap > #button_gnb { height: 35px; /* overflow: hidden; */ }
+        #toggle:checked + #wrap > #button_gnb > ul > li > a { height: 35px; }
+        </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <div id="main_header">
+            <i class="icon header-left-button"></i>
+            <h1>모바일</h1>
+            <label for="toggle">
+            <i class="icon header-right-button"></i></label>
+        </div>
+
+        <!-- 1. ############### 토글 버튼 부분 ############### -->
+        <div id="button_gnb">
+            <ul>
+                <li class="button_home"><a href="#">IT</a></li>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">JQuery</a></li>
+            </ul>
+        </div>
+        <!-- 1. ############### 토글 버튼 부분 ############### -->
+    </div>
+</body>
+</html>

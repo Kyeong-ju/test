@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고쌤 IT</title>
+    <style>
+        /* 1 초기화 */
+        * { margin: 0; padding: 0; }
+        body { font-family: Helvetica, sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+
+        /* header 설정 */
+        .header { height: 60px; line-height: 60px; background: #1D4088; 
+        /* position: relative; */ 
+        padding-left: 20px;  /* 3. 정렬 방법 */
+        border-bottom: 1px solid black;
+
+        /* 상반 바가 스크롤 내릴때 반응 설정 / 스크롤 내릴때 따라 내려간다 */
+        position: fixed; /* 해당 값만 주면 줄어든다 */
+        /* width: 100%;     posintion을 지정했으므로 너비를 지정해야 한다. 하지만 .wrap의 overflow를 지워보면 20% 정도의 공간이 있는걸 알 수 있다. */
+        left: 0;
+        right: 0;
+        }
+
+        body { min-width: 800px; } /* 너비가 너무 줄어드는것을 방지 */
+
+        .header > h1 { 
+            /* margin-left: 20px;               1. 정렬 방법 */
+            /* position: absolute; left: 20px;  2. 정렬 방법 - 부모에 relative 지정*/
+                                             /* 3. .header 에 padding-left 설정 */
+            color: white;
+            }
+        
+        .wrap { 
+            /* 사이드 정렬을 위해 overflow: hidden 을주고 float를 이용 왼쪽 정렬한다 */
+            overflow: hidden; 
+            padding-top: 70px;
+        }
+
+        .aside { float: left; width: 200px; }
+        .section { float: left; width: 100%; margin-right: -200px; } /* 전체의 크기가 100%를 넘으므로 -200 만큼 빼준다 */
+        .inner-section { margin-right: 200px; }  /* 200 만큼 밀어준다 즉! 오른쪽에서 왼쪽으로 밀어준다 */
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <div class="header">
+        <h1>정보보안</h1>
+    </div>
+
+    <!-- aside / section 부분 -->
+    <div class="wrap">
+        <div class="aside">
+            <p>Incididunt duis enim anim do Lorem commodo sint nisi. Aliquip ea aliqua Lorem do laborum esse sit dolore. Amet eiusmod nostrud sit fugiat amet dolor et dolore est mollit et eu. Adipisicing adipisicing eiusmod culpa qui sunt esse veniam consequat ut occaecat ullamco aliqua dolore. Duis et laboris cillum excepteur fugiat nostrud dolore sint exercitation aliqua occaecat in. Tempor qui eu amet ex. Nulla laboris sunt ex anim officia nostrud ad sunt nulla aute deserunt quis irure.
+
+Nulla est deserunt consequat dolore esse mollit fugiat laboris officia et tempor. </p>
+
+        </div>
+        <div class="section">
+            <div class="inner-section">
+                <h1>Voluptate enim proident ipsum amet veniam.</h1>
+                <p>Cupidatat velit aliqua magna aliqua eu labore velit laboris ex pariatur nisi non consectetur cupidatat. Amet et incididunt eu aliqua in tempor sunt dolor ea tempor pariatur mollit reprehenderit minim. Mollit nisi ad laborum est non ullamco culpa sint id cupidatat pariatur dolor cupidatat aliquip. Ex reprehenderit aliquip aliqua irure ipsum sunt est nisi id tempor ipsum cillum esse proident.
+
+                Commodo officia fugiat enim ad veniam mollit dolor ut sunt. Incididunt nisi eiusmod labore incididunt fugiat reprehenderit elit consequat est et qui. Esse exercitation dolor sunt ea. Cillum consequat laboris do est laboris. Labore irure labore laboris dolor ex.
+
+                Do ex nulla velit elit occaecat. Irure Lorem sunt elit quis reprehenderit ad elit. Dolore do Lorem nostrud sunt id reprehenderit. Veniam velit est magna commodo officia mollit. Commodo culpa do nisi sit in sit laboris dolore mollit do consectetur aliqua aliquip. Sit aliqua deserunt nostrud cillum non duis.
+
+                Pariatur nulla anim velit cupidatat consectetur est do ut anim elit exercitation non. Consectetur ea consectetur commodo quis duis sint qui ad elit ipsum excepteur magna. Quis culpa et in proident laboris exercitation non aliqua.
+
+                Eiusmod ipsum qui ullamco labore labore voluptate cillum. Occaecat ex amet dolor eiusmod ad tempor incididunt sunt nulla voluptate consequat cillum. Anim reprehenderit id eiusmod qui consectetur culpa nisi. Culpa sit cillum consectetur irure commodo ut esse enim quis eiusmod. Ipsum et eu id qui adipisicing elit Lorem dolor ullamco voluptate do laboris.</p>
+                <h1>Voluptate enim proident ipsum amet veniam.</h1>
+                <p>Cupidatat velit aliqua magna aliqua eu labore velit laboris ex pariatur nisi non consectetur cupidatat. Amet et incididunt eu aliqua in tempor sunt dolor ea tempor pariatur mollit reprehenderit minim. Mollit nisi ad laborum est non ullamco culpa sint id cupidatat pariatur dolor cupidatat aliquip. Ex reprehenderit aliquip aliqua irure ipsum sunt est nisi id tempor ipsum cillum esse proident.
+
+                Commodo officia fugiat enim ad veniam mollit dolor ut sunt. Incididunt nisi eiusmod labore incididunt fugiat reprehenderit elit consequat est et qui. Esse exercitation dolor sunt ea. Cillum consequat laboris do est laboris. Labore irure labore laboris dolor ex.
+
+                Do ex nulla velit elit occaecat. Irure Lorem sunt elit quis reprehenderit ad elit. Dolore do Lorem nostrud sunt id reprehenderit. Veniam velit est magna commodo officia mollit. Commodo culpa do nisi sit in sit laboris dolore mollit do consectetur aliqua aliquip. Sit aliqua deserunt nostrud cillum non duis.
+
+                Pariatur nulla anim velit cupidatat consectetur est do ut anim elit exercitation non. Consectetur ea consectetur commodo quis duis sint qui ad elit ipsum excepteur magna. Quis culpa et in proident laboris exercitation non aliqua.
+
+                Eiusmod ipsum qui ullamco labore labore voluptate cillum. Occaecat ex amet dolor eiusmod ad tempor incididunt sunt nulla voluptate consequat cillum. Anim reprehenderit id eiusmod qui consectetur culpa nisi. Culpa sit cillum consectetur irure commodo ut esse enim quis eiusmod. Ipsum et eu id qui adipisicing elit Lorem dolor ullamco voluptate do laboris.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

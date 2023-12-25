@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic</title>
+    <!-- 2. https://fonts.google.com/ 폰트선택후 + 눌러 추가 -> 오른쪽 위 아이콘 클릭 -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hind&family=Jost:wght@100&family=Modak&display=swap" rel="stylesheet">
+
+    <style>
+        h1 {
+            font-family: 'Jost', sans-serif;
+        }
+    </style>
+
+    <style>
+        /* 2. 폰트 변경 */
+        @font-face {
+            font-family: userfont; /* 다른 이름변경 허용 */
+            src: url('BMKIRANGHAERANG-TTF.ttf'), url('BMKIRANGHAERANG-OTF.otf');
+
+        }
+        h2 { font-family: userfont; color: white;}
+    </style>
+
+
+
+    <!-- 1. 폰트 스타일  -->
+   <style>
+
+        /* p:nth-child(1) { }
+        p:nth-child(2) { font-size: 1.0em; }
+        p:nth-child(3) { font-size: 1.5em; }
+        p:nth-child(4) { font-size: 2.0em; } */
+
+        .button_font { 
+            font-family: "210 맨발의청춘", sans-serif;
+            font-size: 2em;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+         }
+         #button {
+            width: 130px;
+            height: 70px;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #a9a9a9;
+            background-color: #FF6A00;
+            border: 10px solid white;
+         }
+         #button > a {
+             display: block;
+             /* line-height 속성은 글자의 높이를 지정
+             CSS는 block 형식을 가지는 태그를 수직 정렬할 수 있는 스타일 속성이 없음
+             대체 방안으로 line-height 속성을 사용 */
+             line-height: 70px;   
+         }
+
+         /* 배경이 Alpha */
+        #wrap { width: 100%; background-color: rgba(255, 0, 0, 0.7); margin: 0; position: fixed; top: 0; bottom: 0;}
+
+        /* 내부의 요소 모두가 Alpha 가 먹는다 */
+        /* #wrap { width: 100%; background-color: rgb(red, green, blue); position: fixed; top: 0; bottom: 0; opacity: 0.2;} */
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="button">
+            <a href="#" class="button_font">클릭</a>
+        </div>
+        <br />
+        <h1>Enim officia eu consectetur aliquip</h1><br />
+        <h1 style="font-family: 'Dancing Script';">Magna dolor est officia mollit ad ex enim amet cillum officia nostrud consectetur voluptate.</h1>
+        <h2>배달의 민족!</h2>
+    </div>
+    <h1 style="font-size: 3em; font-weight: bold; font-style: italic; text-align: center; color: black;">안녕하세요 반갑습니다!</h1>
+        
+</body>
+</html>

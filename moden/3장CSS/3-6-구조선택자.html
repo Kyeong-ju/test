@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+        ul { overflow: hidden; }
+        li {
+            list-style: none;
+            float: left; padding: 15px;
+			/*
+			float 은 해당 요소를 어떻게 정렬할지를 정의하는 css 속성이다.
+			none (기본값) : 정렬하지 않는다.
+			left : 왼쪽으로 정렬한다.
+			right: 오른쪽으로 정렬한다.
+			*/
+        }
+        /* 형제관계중 첫번째 선택 */
+        li:first-child { border-radius: 10px 0 0 10px; }
+		<!-- border-radius: 10px(좌,위) 0(우,위) 0(좌,아래) 10px(우,아래); -->
+        li:last-child { border-radius: 0 10px 10px 0; }
+        /* 영어의 홀수 odd, 짝수 even 사용 가능 */
+        /* 수열을 넣으면 된다. 어떤 규칙에 따라 차례로 나열된 수의 열을 수열이라고 한다 
+		   2n, 2n+1 일때, n에 1을 넣으면, 2,3이고 n에 3을 넣으면 4, 5이다. */
+        li:nth-child(2n) { background-color: rgb(80, 250, 131); }
+        li:nth-child(2n+1) { background-color:#fdff89; }
+        /* li:nth-child(even) { background-color: rgb(80, 250, 131); }
+        li:nth-child(odd) { background-color:#fdff89; }		
+    </style>
+</head>
+<body>
+    <ul>
+        <li>first</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+    </ul>
+</body>
+</html>

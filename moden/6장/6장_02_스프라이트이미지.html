@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * { margin: 0; padding: 0; }
+        body { font-family: Helvetica, sans-serif; }
+        a { text-decoration: none; }
+        li { list-style: none; }
+        .icon { display: block; }
+
+        /* 헤더 구조 구성 */
+
+
+        /* 1. 스프라이트 이미지 https://www.toptal.com/developers/css/sprite-generator */
+        .bg-header_left_button { width: 62px; height: 32px; background: url('images/css_sprites.png') -1px -1px; left: 5px; top: 7px; position: absolute; }
+        .bg-header_right_button { width: 32px; height: 32px; background: url('images/css_sprites.png') -1px -35px; right: 5px; top: 7px; position: absolute; }
+        
+        /* 2. header 부분 */
+        #main_header { width: 100%; height: 45px; line-height: 45px; background-image: url('images/header_background.png'); position: relative; text-align: center; }
+        /* line-height 중앙(높이)정렬 / position 해당 div 가 부모가 된다. / 해당 블럭 기준으로 정렬 */
+        #main_header > h1 { color: white; }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle" />
+    <div id="wrap">
+        <div id="main_header">
+
+            <!-- i 는 이택릭체를 사용하나 태그로 잘 사용하지 않는다 그러므로 새로운 태그로 만들어 사용한다.  -->
+            <i class="icon bg-header_left_button"></a></i>
+            <h1>Mobile</h1></label>
+            <i class="icon bg-header_right_button"></i>
+
+        </div>
+    </div>
+</body>
+
+</html>

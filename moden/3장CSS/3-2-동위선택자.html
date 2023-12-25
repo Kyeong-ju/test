@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>동위 선택자</title>
+    <style>
+        /* h1 태그 바로 뒤에 위치하는 h2 태그만 적용. */
+        h1 + h2 { color: red; }
+        
+        /* h1 태그 뒤에 위치하는 h2 모든 태그의
+           background-color 속성에 orange 키워드를 적용합니다. */
+        h1 ~ h2 { background-color: orange; }
+    </style>
+</head>
+<body>
+    <!-- 동위 선택자 -->
+    <h2>1. Header - 2</h2>
+    <h1>2. Header - 1</h1>
+    <h2>3. Header - 2</h2>
+	<!-- h1 + h2(뒤쪽) 가 위치하므로 3.은 폰트 레드, 백그라운드 오렌지색이다. -->
+    <h1>4. Header - 1</h1>
+    <h2>5. Header - 2</h2>
+    <h2>6. Header - 2</h2>
+	<!-- h1 ~ h2 이므로 h2의 백그라운드는 모두 오렌지 색이다. -->
+    <h3>7. Header - 3</h3>
+	<h4>8. Header - 4</h4>
+    <h2>9. Header - 2</h2>
+</body>
+</html>

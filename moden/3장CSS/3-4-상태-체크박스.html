@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+        /* input 태그의 type 속성값이 checkbox인 태그가 체크되었을 때
+            (  + 가 있으므로 동위 연산자다 )
+           바로 뒤에 위치하는 div 태그의 height 속성에 0픽셀을 적용합니다. */
+
+            /*  애니메이션 관련
+           위치 속성 : top, left, bottom, right
+           크기 속성 : width, height
+           박스 속성 : margin, padding
+           테두리 속성 : border-width, border-radius, border-color
+           색상 속성 : color, background-color
+           투명도 속성 : opacity
+           변환 속성 : transform 
+           
+           transition : 모든 속성 한번에 사용
+           transition-delay : 이벤트 발생 후 몇 초 추에 재생할지 지정
+           transition-duration : 재생시간
+           transition-property : 어떤 속성을 변형할지 지정 (위의 속성 참고)
+           transition-timing-function : 수치 변형 함수를 지정 ( 가속도 )
+           */
+        input[type=checkbox]:checked + div {
+            height: 0px;
+        }
+        div {
+            overflow: hidden;
+            width: 650px; height: 300px;
+            /* 변환 효과를 적용합니다. */
+            -ms-transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            transition-duration: 1s;
+            
+        }
+    </style>
+</head>
+<body>
+    뒤따라 오는 값이 DIV이다 : <input type="checkbox" /> (체크시 사라진다.)
+    <div>
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisi velit. Phasellus suscipit pellentesque leo, vel efficitur mi placerat sed. Fusce vel condimentum leo, at iaculis ante. Suspendisse posuere, dolor non tempor ullamcorper, nisl elit facilisis erat, nec lacinia augue erat id lacus. Curabitur mollis, justo nec lobortis hendrerit, libero nunc aliquam lacus, ut tristique sem nunc eu metus. Quisque varius orci eu felis sollicitudin malesuada. Vivamus pretium ligula velit, eget facilisis enim imperdiet ac.</p>
+    </div>
+</body>
+</html>

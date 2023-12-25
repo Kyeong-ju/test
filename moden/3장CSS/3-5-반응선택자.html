@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+        /* h1 태그에 마우스를 올릴 경우에 
+           color 속성에 red 키워드를 적용합니다. */
+        h1:hover { color: red; }
+        /* h1 태그를 마우스로 클릭할 때 
+           color 속성에 blue 키워드를 적용합니다. */
+        h1:active { color: blue; }
+        div { margin: 0 auto; text-align: center;}
+		<!-- 1. 평상시 출력 -->
+        div > #bg { width: 200px; height: 200px; background-image: url('./img.gif'); border: 1px solid black; border-radius: 70%;}
+        <!-- 2. 마우스 오버시 출력 -->
+		div > #bg:hover { width: 200px; height: 200px; background-image: url('./img.jpg'); box-shadow: 3px 3px 10px black; }
+        /* box-shadow do it 참고 312page */
+		<!-- 3. 마우스 클릭시 출력 -->
+        div > #bg:active { width: 200px; height: 200px; background-image: url('./img.png'); }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+    <div><h1>User Action Selector</h1></div>
+    <div id="bg"></div>
+</body>
+</html>

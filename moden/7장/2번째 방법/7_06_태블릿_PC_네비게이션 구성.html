@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태블릿</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: Helvetica, sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+
+        #main_header { 
+            height: 60px;
+            line-height: 60px;
+            padding-left: 10px;
+            border-bottom: 1px solid black;
+            background: #1D4088;
+         }
+    </style>
+    <style>
+        body { min-width: 760px; } /* 내비게이션 메뉴가 깨지는 것을 방지, 최소 사이즈 지정 */
+
+        /* 상단 내비게이션 */
+        #main_gnb { overflow: hidden; border-bottom: 1px solid black; background: #32394A; }
+        #main_gnb > ul.left { overflow:hidden; float: left;} /* 부모에 overflow 지정후 float 설정 */
+        #main_gnb > ul.right { overflow:hidden; float: right;} /* 아래 li의 부모 이므로 overflow 지정 */
+
+        #main_gnb > ul.left > li { float: left; }  /* inline 지정(수평)을 위해 overflow > float 지정 */
+        #main_gnb > ul.right > li { float: right; }
+        
+        /* a 태그 설정 */
+        #main_gnb a { 
+            /* 레이아웃 설정 */
+            display: block; padding: 10px 20px;   /* 블럭지정 margin 설정가능,  y 측 10, x 측 20  */
+            
+            /* 색상 설정 */
+            border-left: 1px solid #5F6673;  /* 경계선 */
+            border-right: 1px solid #242A37;
+            color: white;
+            font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <h1>HTML5</h1>
+    </header>
+    <nav id="main_gnb">
+        <ul class="left">
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

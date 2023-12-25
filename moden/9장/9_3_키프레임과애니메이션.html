@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        body { position: relative; }
+        #box {
+            position: absolute; width: 200px; height: 200px; border-radius: 100%; text-align: center; 
+            background: linear-gradient(#CB60B3 0%, #DB36A4 100%);
+
+        /* do-it 474페이지 */
+        /* 아래의 애니메이션 속성을 키프레임에 연결, 애니메이션 속성은 반드시 name, duration 속성을 사용해야 한다.*/
+        animation-name: rint; /* 애니메이션 이름 지정 */
+        animation-duration: 5s; /* 애니메이션 실행 시간 */
+        animation-timing-function: linear; /* 애니메이션 속도 곡선 지정 linear, ease, ease-in... */
+        animation-iteration-count: infinite; /* 무한 반복 또는 반복횟수 지정(숫자) */
+        animation-direction: alternate; /* alternate : 핑퐁, normal 은 from 에서 to로 한방향으로 이동*/
+        /* animation-play-state: running; 마우스 오버시 멈춤등 설정, 자바스크립트로 설정해야 한다. */
+
+        /* 한줄 입력 */
+        /* animation: rint 2s linear none infinite alternate; */
+
+        }
+        #box > h1 { line-height: 200px; }
+
+        /* 애니메이션 움직임  from 에서 까지 */
+        @keyframes rint {
+            from {
+                left: 0;
+                transform: rotate(0deg);
+            }
+            50% {
+                left: 500px;
+            }
+            to {
+                left: 1000px;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Rotation</h1>
+    </div>
+    
+</body>
+</html>
